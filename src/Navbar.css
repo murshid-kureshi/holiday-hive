@@ -1,0 +1,170 @@
+/* ===========================
+   NAVBAR
+   =========================== */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 60px;
+  background-color: #2563eb;
+  z-index: 1000;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+}
+
+body {
+  padding-top: 60px;
+}
+
+/* ===========================
+   INNER
+   =========================== */
+.navbar-container {
+  max-width: 1200px;
+  height: 100%;
+  margin: auto;
+  padding: 0 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* ===========================
+   LOGO
+   =========================== */
+.navbar-logo a {
+  color: #ffffff;
+  font-size: 1.3rem;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+/* ===========================
+   LINKS
+   =========================== */
+.navbar-links {
+  display: flex;
+  gap: 28px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar-links li a {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 0.95rem;
+  font-weight: 500;
+  position: relative;
+  padding-bottom: 6px;
+  transition: color 0.3s ease;
+}
+
+/* Hover */
+.navbar-links li a:hover {
+  color: #e0e7ff;
+}
+
+/* Underline */
+.navbar-links li a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  height: 3px;
+  background: #ffffff;
+  border-radius: 2px;
+  transition: width 0.3s ease;
+}
+
+/* Hover underline */
+.navbar-links li a:hover::after {
+  width: 100%;
+}
+
+/* ===========================
+   ACTIVE LINK (IMPORTANT)
+   =========================== */
+.navbar-links li a.active {
+  color: #ffeb3b;
+  font-weight: 600;
+}
+
+.navbar-links li a.active::after {
+  width: 100%;
+  background: #ffeb3b;
+}
+
+/* ===========================
+   HAMBURGER
+   =========================== */
+.hamburger {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.hamburger span {
+  display: block;
+  width: 24px;
+  height: 3px;
+  background: #ffffff;
+  margin: 5px 0;
+  border-radius: 3px;
+  transition: all 0.3s ease;
+}
+
+.hamburger.active span:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+.hamburger.active span:nth-child(2) {
+  opacity: 0;
+}
+.hamburger.active span:nth-child(3) {
+  transform: rotate(-45deg) translate(5px, -5px);
+}
+
+/* ===========================
+   MOBILE
+   =========================== */
+@media (max-width: 900px) {
+  .hamburger {
+    display: block;
+  }
+
+  .navbar-links {
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    background-color: #2563eb;
+    flex-direction: column;
+    align-items: center;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.35s ease;
+  }
+
+  .navbar-links.open {
+    max-height: 320px;
+  }
+
+  .navbar-links li {
+    width: 100%;
+    text-align: center;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+  }
+
+  .navbar-links li a {
+    display: block;
+    padding: 16px 0;
+  }
+
+  .navbar-links li a::after {
+    display: none;
+  }
+}
+
+

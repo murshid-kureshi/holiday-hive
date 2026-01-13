@@ -1,0 +1,93 @@
+* {
+  box-sizing: border-box;
+  font-family: "Inter", sans-serif;
+}
+
+/* Background */
+.login-page {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+}
+
+/* Glass card */
+.login-box {
+  width: 380px;
+  padding: 36px;
+  border-radius: 18px;
+  text-align: center;
+}
+
+.glass {
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.4);
+}
+
+/* Title */
+.login-box h2 {
+  color: #ffffff;
+  margin-bottom: 22px;
+}
+
+/* Inputs */
+.login-box input {
+  width: 100%;
+  padding: 14px;
+  margin-bottom: 12px;
+  border-radius: 10px;
+  border: none;
+  outline: none;
+  font-size: 14px;
+}
+
+/* OTP box */
+.otp-box {
+  display: flex;
+  justify-content: space-between;
+  margin: 16px 0;
+}
+
+.otp-box input {
+  width: 46px;
+  height: 52px;
+  text-align: center;
+  font-size: 20px;
+  border-radius: 10px;
+  border: none;
+}
+
+/* Button */
+.login-box button {
+  width: 100%;
+  padding: 14px;
+  background: linear-gradient(135deg, #2563eb, #1e40af);
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.login-box button:hover {
+  transform: translateY(-2px);
+}
+
+/* Info */
+.info-text {
+  color: #e5e7eb;
+  font-size: 13px;
+  margin-bottom: 8px;
+}
+
+/* Error */
+.error {
+  color: #fecaca;
+  font-size: 12px;
+  margin-bottom: 8px;
+  display: block;
+}
+

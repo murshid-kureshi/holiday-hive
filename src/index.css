@@ -1,0 +1,38 @@
+:root {
+  --brand: #1976ff;
+  --muted: #6b7280;
+  --body-bg: #ffffff;
+  --surface: #f7fbfd;
+  --text: #000000;
+  --soft: #eef6fb;
+
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+* { box-sizing: border-box; }
+
+html, body, #root { height: 100%; }
+
+/* Smooth in-page scrolling for anchor links */
+html { scroll-behavior: smooth; }
+
+body {
+  margin: 0;
+  background: var(--body-bg);
+  color: var(--text);
+  min-width: 320px;
+  -webkit-font-smoothing: antialiased;
+}
+
+a { color: var(--brand); text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+h1, h2, h3 { margin: 0; color: var(--text); }
+
+button { font-family: inherit; }
+
+@media (prefers-color-scheme: dark) {
+  :root { --body-bg: #0b1220; --text: #e6eef6; }
+}
